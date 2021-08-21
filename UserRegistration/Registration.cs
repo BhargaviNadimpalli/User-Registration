@@ -8,7 +8,7 @@ namespace UserRegistration
     {
         public void Check(string name)
         {
-            string pattern = "^[A-Z][a-z]*$";
+            string pattern = "^[A-Z][a-z]{3}[a-z]*$";
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(name))
             {
