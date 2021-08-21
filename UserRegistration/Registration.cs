@@ -6,17 +6,17 @@ namespace UserRegistration
 {
     class Registration
     {
-        public void Check(string phNumber)
+        public void Check(string passward)
         {
-            string pattern = @"^[1 - 9]{2}\s[1 - 9][0 - 9]{9}$";
+            string pattern = @"^[a-zA-Z0-9]{8}[a-zA-Z0-9]*";
             Regex regex = new Regex(pattern);
-            if (regex.IsMatch(phNumber))
+            if (regex.IsMatch(passward))
             {
-                Console.WriteLine("{0} is Valid ", phNumber);
+                Console.WriteLine("{0} is Valid ", passward);
             }
             else
             {
-                Console.WriteLine("{0} is Invalid", phNumber);
+                Console.WriteLine("{0} is Invalid", passward);
             }
         }
     }
