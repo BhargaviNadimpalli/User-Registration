@@ -8,7 +8,7 @@ namespace UserRegistration
     {
         public void Check(string passward)
         {
-            string pattern = @"^(?=.*[A-Z])[a-zA-Z0-9]{8,20}$";
+            string pattern = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$";
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(passward))
             {
