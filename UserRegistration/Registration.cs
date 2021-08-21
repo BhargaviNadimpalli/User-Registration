@@ -6,17 +6,17 @@ namespace UserRegistration
 {
     class Registration
     {
-        public void Check(string mail)
+        public void Check(string phNumber)
         {
-            string pattern = @"^[a - z]{ 3} ([\# \+ _\.]*[a-zA-Z0-9])*@[a-zA-z]+\.[a-z]{2,3}(\.[a-zA-Z]{2,4}){0,1}$";
+            string pattern = @"^[1 - 9]{2}\s[1 - 9][0 - 9]{9}$";
             Regex regex = new Regex(pattern);
-            if (regex.IsMatch(mail))
+            if (regex.IsMatch(phNumber))
             {
-                Console.WriteLine("{0} is Valid ", mail);
+                Console.WriteLine("{0} is Valid ", phNumber);
             }
             else
             {
-                Console.WriteLine("{0} is Invalid", mail);
+                Console.WriteLine("{0} is Invalid", phNumber);
             }
         }
     }
