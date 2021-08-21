@@ -10,9 +10,9 @@ namespace UserRegistration
             Console.WriteLine("Welcome to user registration programs");
             
             Registration user = new Registration();
-            Console.Write("Enter your last name : ");
-            string lastName = Console.ReadLine();
-            user.Check(lastName);
+            Console.Write("Enter your mail id : ");
+            string mailId = Console.ReadLine();
+            user.Check(mailId);
         }
     }
 }
